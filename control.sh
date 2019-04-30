@@ -101,6 +101,7 @@ check_py() {
         virtualenv --no-site-packages ${G_VENV_DIR}
     fi
     source ${G_VENV_DIR}/bin/activate
+    pip install click==6.7
     pip install -r ${G_API_DIR}/requirements.txt
     if [ ! -e ${G_VENV_DIR}/bin/curve_uwsgi ]; then
         cd ${G_VENV_DIR}/bin
